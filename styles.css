@@ -1,0 +1,361 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff0ad; /* Light mustard color */
+    color: #50394c; /* Darker purple for text */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Confetti styling */
+.confetti-piece {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ffbf00;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px) rotate(0); opacity: 1; }
+    100% { transform: translateY(800px) rotate(360deg); opacity: 0; }
+}
+.quote-box {
+    animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { background-color: rgba(193, 160, 254, 0.9); }
+    50% { background-color: rgba(164, 234, 253, 0.9); }
+    100% { background-color: rgba(251, 196, 120, 0.9); }
+}
+
+/* Scattered background images */
+.background-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-images img {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    opacity: 0.2;
+    transition: opacity 0.3s, transform 0.5s;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.background-images img:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+/* Quirkee text styling with jump animation */
+.quirkee {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    transform: rotate(-25deg); /* Slight tilt from bottom to top */
+    text-shadow: 
+        -1px -1px 0 #000, /* Black outline */
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        4px 4px 0 #ff5050,
+        8px 8px 0 #ffbf00,
+        12px 12px 0 #00cc99,
+        16px 16px 0 #66b2ff,
+        20px 20px 0 #ff66ff;
+    letter-spacing: 2px;
+    animation: jump 2s ease-in-out infinite; /* Add jump animation */
+}
+
+/* Keyframes for jump animation */
+@keyframes jump {
+    0%, 100% { transform: rotate(-25deg) translateY(0); }
+    50% { transform: rotate(-25deg) translateY(-10px); } /* Moves up by 10px at midpoint */
+}
+
+
+/* Quote box styling */
+.quote-box {
+    background-color: rgba(179, 157, 221, 0.9); /* Medium purple with opacity */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s; /* Shadow on hover */
+}
+
+.quote-box:hover {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Quote text styling */
+.quote {
+    font-size: 1.2em;
+    color: #fff4e6;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Button styling */
+.generate-quote {
+    background-color: #ffcc80;
+    color: #50394c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block; /* Center button */
+}
+
+.generate-quote:hover {
+    background-color: #dba76b;
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Image gallery styling */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    max-width: 80%;
+}
+
+.image-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Introductory text styling */
+.intro {
+    text-align: center;
+    margin-top: 30px;
+    max-width: 600px;
+    font-size: 1.2em; /* Increased font size for emphasis */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #50394c;
+    padding: 0 10px; /* Added padding for better spacing */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .quirkee {
+        font-size: 40px; /* Responsive font size */
+    }
+    .quote {
+        font-size: 1em; /* Responsive quote font size */
+    }
+    .generate-quote {
+        font-size: 0.9em; /* Smaller button font */
+    }
+}
+
+
+/* Section Headings */
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #50394c;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Who We Are Section */
+.who-we-are {
+    background-color: rgba(255, 224, 178, 0.9); /* Soft peach background */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.who-we-are p {
+    font-size: 1.2em;
+    color: #50394c;
+    line-height: 1.6;
+}
+
+/* Fun Facts Section */
+.fun-facts {
+    background-color: rgba(252, 207, 235, 0.9); /* Light gray background */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fun-facts ul {
+    list-style: none;
+    padding: 0;
+    color: #50394c;
+}
+
+.fun-facts li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    position: relative;
+    padding-left: 25px;
+}
+
+.fun-facts li::before {
+    content: "✨";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background-color: #cae9fa; 
+    border-radius: 20px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contact-us h2 {
+    color: #50394c;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.contact-us p {
+    color: #6b4e57;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between input fields */
+}
+
+.contact-us label {
+    font-size: 1em;
+    color: #50394c;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.contact-us input, .contact-us textarea {
+    padding: 15px;
+    border: 2px solid #ffc3a0; /* Peach-colored border */
+    border-radius: 12px;
+    font-size: 1em;
+    background-color: #fff;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-us input:focus, .contact-us textarea:focus {
+    border-color: #f57c00; /* Vibrant orange on focus */
+    box-shadow: 0 0 5px rgba(245, 124, 0, 0.5);
+}
+
+.contact-us button {
+    background-color: #ffa726; /* Bright orange button */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-us button:hover {
+    background-color: #f57c00;
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(245, 124, 0, 0.3);
+}
+
+.contact-us button:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-us {
+        padding: 20px;
+    }
+
+    .contact-us h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-us p {
+        font-size: 1em;
+    }
+
+    .contact-us input, .contact-us textarea {
+        font-size: 0.9em;
+    }
+
+    .contact-us button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-us {
+        padding: 15px;
+    }
+
+    .contact-us h2 {
+        font-size: 1.3em;
+    }
+
+    .contact-us button {
+        padding: 10px 15px;
+    }
+}

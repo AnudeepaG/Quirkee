@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quirkee Vibes</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Scattered background images -->
+    <div class="background-images" id="background-images"></div>
+
+    <!-- Quirkee title -->
+    <div class="quirkee">Quirkee</div>
+
+    <!-- Who We Are Section -->
+    <div class="who-we-are">
+        <h2>Who We Are</h2>
+        <p><b> Welcome to Quirkee Vibes! A place where we celebrate uniqueness and creativity. Embrace your quirks and enjoy a collection of fun quotes that inspire you to be your true self! We are a bunch of creative souls who believe in embracing individuality. Through vibrant content, playful designs, and quirky vibes, we aim to bring joy and inspiration to people from all walks of life.</b></p>
+    </div>
+
+    <!-- Quote box with dynamic content -->
+    <div class="quote-box">
+        <p class="quote" id="quote"><b>"Be yourself; everyone else is already taken."</b></p>
+        <button class="generate-quote" onclick="generateQuote()">New Quote</button>
+    </div>
+
+    <!-- Image gallery -->
+    <div class="image-gallery">
+        <img src="images/pic1.jpg" alt="Description 1">
+        <img src="images/pic2.jpg" alt="Description 2">
+        <img src="images/pic3.jpg" alt="Description 3">
+        <img src="images/pic4.jpg" alt="Description 4">
+        <img src="images/pic5.jpg" alt="Description 5">
+    </div>
+    
+
+    <!-- Fun Facts Section -->
+    <div class="fun-facts">
+        <h2>Fun Facts</h2>
+        <ul>
+            <li>We’ve celebrated over 100 quirky moments with our community.</li>
+            <li>Did you know? The color yellow is scientifically proven to make people happy.</li>
+            <li>Our mascot is a unicorn named Sparkles, who loves confetti!</li>
+            <li>The idea for Quirkee started during a midnight pancake party.</li>
+            <li>Why did the biryani go to therapy?It couldn’t deal with all the mixed emotions. 🍛</li>
+            <li>Every Friday is “Funky Socks Friday”—even on Zoom calls!</li>
+            <li> Why did the tomato turn red?Because it saw the curry blushing! 🍅</li>
+            <li>On our birthdays, we celebrate with bubble-wrap popping contests!</li>
+        </ul>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="contact-us">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
